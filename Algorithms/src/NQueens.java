@@ -1,9 +1,5 @@
-
 public class NQueens {
-
-	
-	
-	    final int N = 4;
+	    int N = 4;//board dimension 4 X 4
 	 
 	    void printSolution(int board[][])
 	    {
@@ -16,7 +12,6 @@ public class NQueens {
 	        }
 	    }
 	 
-	   
 	    boolean isSafe(int board[][], int row, int col)
 	    {
 	        int i, j;
@@ -36,8 +31,7 @@ public class NQueens {
 	 
 	        return true;
 	    }
-	 
-	    boolean solveNQUtil(int board[][], int col)
+	    boolean solveBoard(int board[][], int col)
 	    {
 	        if (col >= N)
 	            return true;
@@ -50,17 +44,15 @@ public class NQueens {
 	             
 	                board[i][col] = 1;
 	 
-	                if (solveNQUtil(board, col + 1) == true)
+	                if (solveBoard(board, col + 1) == true)
 	                    return true;
 	 
 	                board[i][col] = 0; // BACKTRACK
 	            }
 	        }
 	 
-	      
 	        return false;
 	    }
-	 
 	   
 	    boolean solveNQ()
 	    {
@@ -70,7 +62,7 @@ public class NQueens {
 	            {0, 0, 0, 0}
 	        };
 	 
-	        if (solveNQUtil(board, 0) == false)
+	        if (solveBoard(board, 0) == false)
 	        {
 	            System.out.print("Solution does not exist");
 	            return false;
@@ -80,7 +72,6 @@ public class NQueens {
 	        return true;
 	    }
 	 
-	    // driver program to test above function
 	    public static void main(String args[])
 	    {
 	    	NQueens Queen = new NQueens();
