@@ -1,3 +1,4 @@
+package algos;
 public class NQueens {
 	    int N = 4;//board dimension 4 X 4
 	 
@@ -31,7 +32,7 @@ public class NQueens {
 	 
 	        return true;
 	    }
-	    boolean solveBoard(int board[][], int col)
+	    public boolean solveBoard(int board[][], int col)
 	    {
 	        if (col >= N)
 	            return true;

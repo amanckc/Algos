@@ -1,3 +1,4 @@
+package algos;
 
 public class Robinkarp {
 //string matching

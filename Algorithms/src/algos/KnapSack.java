@@ -1,3 +1,4 @@
+package algos;
 //dynamic programming
 public class KnapSack {
 	int maximum(int a, int b) { return (a > b)? a : b; }
